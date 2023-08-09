@@ -7,6 +7,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import openCV from "~/customHooks/openCV";
+
 const BurgerMenuItem = () => {
   return (
     <Box mr={10}>
@@ -18,9 +20,13 @@ const BurgerMenuItem = () => {
           variant="outline"
         />
         <MenuList>
-          <MenuItem>CV</MenuItem>
-          <MenuItem>Projects</MenuItem>
-          <MenuItem>Testimonials</MenuItem>
+          <MenuItem onClick={() => openCV()}>CV</MenuItem>
+          <MenuItem onClick={() => (window.location.href = "#projects")}>
+            Projects
+          </MenuItem>
+          <MenuItem onClick={() => (window.location.href = "#testimonials")}>
+            Testimonials
+          </MenuItem>
           <MenuItem>Contacts</MenuItem>
         </MenuList>
       </Menu>

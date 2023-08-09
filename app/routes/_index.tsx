@@ -1,10 +1,12 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
+import Contact from "~/components/Contact";
 import Header from "~/components/Header";
 import Highlights from "~/components/Highlights";
 import MainInfo from "~/components/MainInfo";
 import Projects from "~/components/Projects";
+import Testimonials from "~/components/Testimonials";
 import { size } from "../size";
 const MainContainer = styled.div`
   min-height: 100vh;
@@ -35,6 +37,8 @@ const _index = () => {
         <Highlights />
       </HighlightsContainer>
       <Projects />
+      <Testimonials />
+      <Contact />
     </MainContainer>
   );
 };
