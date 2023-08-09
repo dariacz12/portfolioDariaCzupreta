@@ -10,6 +10,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import styled from "styled-components";
+import openCV from "~/customHooks/openCV";
 import { size } from "~/size";
 
 const MainContainer = styled.div`
@@ -32,6 +33,10 @@ const TextWrapper = styled.div`
 
 const MainInfo = () => {
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+  // const handleClick = () => {
+  //   const pdfPath = '/documents/cvDariaCzupreta.pdf';
+  //   window.open(pdfPath, '_blank');
+  // };
   return (
     <MainContainer>
       <Heading as="h2" size="2xl" my={5}>
@@ -53,7 +58,13 @@ const MainInfo = () => {
       <Text zIndex={1} color={"white"} fontWeight={"medium"} fontSize="xl">
         Daria Czupreta
       </Text>
-      <Button my={3} zIndex={2} color={"whiteAlpha"} bgColor={"#D1C4E9"}>
+      <Button
+        my={3}
+        zIndex={2}
+        color={"whiteAlpha"}
+        bgColor={"#D1C4E9"}
+        onClick={() => openCV()}
+      >
         Download CV
       </Button>
       <Box
