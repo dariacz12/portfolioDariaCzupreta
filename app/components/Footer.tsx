@@ -8,7 +8,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 
   @media (max-width: ${size.md}) {
     padding-top: 0px;

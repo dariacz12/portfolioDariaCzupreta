@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { size } from "~/size";
 import { useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "@remix-run/react";
+import { projectsList } from "~/listOfProjects";
 
 const Menu = styled.div`
   display: flex;
@@ -40,40 +42,7 @@ const ProjectBoxSmall = styled.div`
     margin: 40px;
   }
 `;
-const projectsList = [
-  {
-    id: 1,
-    type: "app",
-    videoName: "mainpage.mov",
-    projectName: "Test Board 1",
-    mainInfo: "test info test info test info",
-    tools: ["React", "TypeScript", "StyledComponents"],
-  },
-  {
-    id: 2,
-    type: "webpage",
-    videoName: "mainpage.mov",
-    projectName: "Test Board 2",
-    mainInfo: "test info test info test info",
-    tools: ["React", "TypeScript", "StyledComponents"],
-  },
-  {
-    id: 3,
-    type: "webpage",
-    videoName: "mainpage.mov",
-    projectName: "Test Board 3",
-    mainInfo: "test info test info test info",
-    tools: ["React", "TypeScript", "StyledComponents"],
-  },
-  {
-    id: 4,
-    type: "webpage",
-    videoName: "mainpage.mov",
-    projectName: "Test Board 4",
-    mainInfo: "test info test info test info",
-    tools: ["React", "TypeScript", "StyledComponents"],
-  },
-];
+
 const calculateOpacity = (size: any) => {
   if (size.sm) {
     return 1;
@@ -132,6 +101,7 @@ const Projects = () => {
   };
   const [state, setState] = useState<Boolean | String>(false);
   const [isLargerThan] = useMediaQuery("(min-width: 768px)");
+  const navigate = useNavigate();
   return (
     <Box
       id={"projects"}
@@ -208,6 +178,7 @@ const Projects = () => {
                 <ProjectBox
                   onMouseOver={() => handleMouseOver(id)}
                   onMouseOut={() => handleMouseOut(id)}
+                  onClick={() => navigate(`/myprojects/${id}`)}
                 >
                   <video
                     style={{ opacity: 0.5, borderRadius: "15px" }}
