@@ -10,6 +10,12 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import openCV from "~/customHooks/openCV";
 
 const BurgerMenuItem = () => {
+  const handleClickScroll = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <Box mr={10}>
       <Menu>
@@ -21,13 +27,15 @@ const BurgerMenuItem = () => {
         />
         <MenuList>
           <MenuItem onClick={() => openCV()}>CV</MenuItem>
-          <MenuItem onClick={() => (window.location.href = "#projects")}>
+          <MenuItem onClick={() => handleClickScroll("#projects")}>
             Projects
           </MenuItem>
-          <MenuItem onClick={() => (window.location.href = "#testimonials")}>
+          <MenuItem onClick={() => handleClickScroll("#testimonials")}>
             Testimonials
           </MenuItem>
-          <MenuItem>Contacts</MenuItem>
+          <MenuItem onClick={() => handleClickScroll("#contact")}>
+            Contact
+          </MenuItem>
         </MenuList>
       </Menu>
     </Box>

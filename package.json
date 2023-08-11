@@ -23,6 +23,7 @@
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
     "source-map-support": "^0.5.21",
     "styled-components": "^6.0.6",
     "useref": "^1.4.4"

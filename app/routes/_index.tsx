@@ -2,6 +2,7 @@ import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 import Contact from "~/components/Contact";
+import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import Highlights from "~/components/Highlights";
 import MainInfo from "~/components/MainInfo";
@@ -39,6 +40,7 @@ const _index = () => {
       <Projects />
       <Testimonials />
       <Contact />
+      <Footer />
     </MainContainer>
   );
 };

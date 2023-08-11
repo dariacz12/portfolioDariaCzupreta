@@ -2,6 +2,7 @@ import { Box, Button, Heading, Text } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { size } from "~/size";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Menu = styled.div`
   display: flex;
@@ -10,6 +11,10 @@ const Menu = styled.div`
 const ProjectBox = styled.div`
   position: relative;
   margin: 40px;
+
+  @media (max-width: ${size.md}) {
+    display: none;
+  }
 `;
 const TextBox = styled.div`
   display: flex;
@@ -26,6 +31,13 @@ const TextBox = styled.div`
   @media (max-width: ${size.md}) {
     bottom: 50px;
     left: 50px;
+  }
+`;
+const ProjectBoxSmall = styled.div`
+  display: none;
+  @media (max-width: ${size.md}) {
+    display: flex;
+    margin: 40px;
   }
 `;
 const projectsList = [
@@ -62,6 +74,13 @@ const projectsList = [
     tools: ["React", "TypeScript", "StyledComponents"],
   },
 ];
+const calculateOpacity = (size: any) => {
+  if (size.sm) {
+    return 1;
+  } else {
+    return 0.5;
+  }
+};
 const Projects = () => {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const setVideoRefs = (
@@ -103,6 +122,7 @@ const Projects = () => {
     [key: number]: boolean;
   }>({});
 
+  const opacity = calculateOpacity(size);
   const handleMouseOver = (id: any) => {
     setTextBoxVisibility((prevState) => ({ ...prevState, [id]: true }));
   };
@@ -111,6 +131,7 @@ const Projects = () => {
     setTextBoxVisibility((prevState) => ({ ...prevState, [id]: false }));
   };
   const [state, setState] = useState<Boolean | String>(false);
+  const [isLargerThan] = useMediaQuery("(min-width: 768px)");
   return (
     <Box
       id={"projects"}
@@ -183,34 +204,78 @@ const Projects = () => {
           .filter(({ type }) => type === state || !state)
           .map(({ videoName, id, projectName, mainInfo, tools }, index) => {
             return (
-              <ProjectBox
-                onMouseOver={() => handleMouseOver(id)}
-                onMouseOut={() => handleMouseOut(id)}
-              >
-                <video
-                  style={{ opacity: "0.5", borderRadius: "15px" }}
-                  width={"650px"}
-                  ref={(videoElement) => setVideoRefs(videoElement, index)}
-                  loop
-                  playsInline
-                  muted
-                  src={require(`../../public/video/mainpage.mov`)}
-                ></video>
-                {textBoxVisibility[id] && (
+              <Box key={index}>
+                <ProjectBox
+                  onMouseOver={() => handleMouseOver(id)}
+                  onMouseOut={() => handleMouseOut(id)}
+                >
+                  <video
+                    style={{ opacity: 0.5, borderRadius: "15px" }}
+                    width={"650px"}
+                    ref={(videoElement) => setVideoRefs(videoElement, index)}
+                    loop
+                    playsInline
+                    muted
+                    src={require(`../../public/video/mainpage.mov`)}
+                  ></video>
+
+                  {textBoxVisibility[id] && (
+                    <TextBox>
+                      <Heading
+                        mb={"10px"}
+                        color={"white"}
+                        textShadow={"lg"}
+                        as="h4"
+                        fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                      >
+                        {projectName}
+                      </Heading>
+                      <Text
+                        mb={"10px"}
+                        color={"white"}
+                        fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                        textShadow={"2xl"}
+                      >
+                        {mainInfo}
+                      </Text>
+                      <Box style={{ display: "flex" }}>
+                        {tools.map((tool) => (
+                          <Text
+                            fontSize={{ sm: "xs", base: "sm" }}
+                            borderRadius={"5px"}
+                            padding={"5px"}
+                            backgroundColor={"#D1C4E9"}
+                            mr={"8px"}
+                            color={"white"}
+                            textShadow={"lg"}
+                          >
+                            {tool}
+                          </Text>
+                        ))}
+                      </Box>
+                    </TextBox>
+                  )}
+                </ProjectBox>
+                <ProjectBoxSmall>
+                  <video
+                    style={{ borderRadius: "15px" }}
+                    width={"650px"}
+                    src={require(`../../public/video/mainpage.mov`)}
+                  ></video>
                   <TextBox>
                     <Heading
                       mb={"10px"}
                       color={"white"}
                       textShadow={"lg"}
                       as="h4"
-                      fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                      fontSize={"sm"}
                     >
                       {projectName}
                     </Heading>
                     <Text
                       mb={"10px"}
                       color={"white"}
-                      fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                      fontSize={"sm"}
                       textShadow={"2xl"}
                     >
                       {mainInfo}
@@ -218,7 +283,7 @@ const Projects = () => {
                     <Box style={{ display: "flex" }}>
                       {tools.map((tool) => (
                         <Text
-                          fontSize={{ sm: "xs", base: "sm" }}
+                          fontSize={"xs"}
                           borderRadius={"5px"}
                           padding={"5px"}
                           backgroundColor={"#D1C4E9"}
@@ -231,8 +296,8 @@ const Projects = () => {
                       ))}
                     </Box>
                   </TextBox>
-                )}
-              </ProjectBox>
+                </ProjectBoxSmall>
+              </Box>
             );
           })}
       </Box>
