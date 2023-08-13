@@ -4,13 +4,35 @@ import { useNavigate } from "@remix-run/react";
 import styled from "styled-components";
 import Footer from "~/components/Footer";
 import { Outlet } from "@remix-run/react";
+import { size } from "~/size";
 
-const MainContainer2 = styled.div`
+const MainContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
+const HeaderBox = styled.div`
+  width: 100%;
+  height: 50px;
+  margin-top: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  @media (max-width: ${size.md}) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+`;
+const BoxLine = styled.div`
+  margin-left: 80px;
+  margin-right: 80px;
+  height: 1px;
+  background-color: #bdbdbd;
 
+  @media (max-width: ${size.md}) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+`;
 export default function MyProjectsRoute() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -18,8 +40,8 @@ export default function MyProjectsRoute() {
   };
 
   return (
-    <MainContainer2>
-      <Box w="100%" height={"50px"} mt={"40px"} px={"40px"}>
+    <MainContainer>
+      <HeaderBox>
         <ChevronLeftIcon
           onClick={() => navigate(-1)}
           cursor={"pointer"}
@@ -28,12 +50,12 @@ export default function MyProjectsRoute() {
           boxSize={8}
           borderRadius="full"
         />
-      </Box>
-      <Box mx={"40px"} height={"1px"} backgroundColor={"blackAlpha.300"}></Box>
+      </HeaderBox>
+      <BoxLine></BoxLine>
       <Box>
         <Outlet />
       </Box>
       <Footer />
-    </MainContainer2>
+    </MainContainer>
   );
 }

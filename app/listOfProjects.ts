@@ -8,8 +8,10 @@ export const projectsList = [
     text: "What is Trello? Trello is the visual tool that empowers your team to manage any type of project, workflow, or task tracking. Add files, checklists, or even automation: Customize it all for how your team works best. Just sign up, create a board, and you’re off!",
     tools: ["React", "TypeScript", "StyledComponents"],
     website: "https://trello.com/",
-    githyb: "https://github.com/dariacz12",
+    github: "https://github.com/dariacz12",
     images: [
+      { name: "avatarDCz.jpg", caption: "Class management" },
+      { name: "avatarDCz.jpg", caption: " Daria" },
       { name: "computer.png", caption: "Class management" },
       { name: "avatarDCz.jpg", caption: " Daria" },
     ],
@@ -23,7 +25,7 @@ export const projectsList = [
     text: "What is Trello? Trello is the visual tool that empowers your team to manage any type of project, workflow, or task tracking. Add files, checklists, or even automation: Customize it all for how your team works best. Just sign up, create a board, and you’re off!",
     tools: ["React", "TypeScript", "StyledComponents"],
     website: "https://trello.com/",
-    githyb: "https://github.com/dariacz12",
+    github: "https://github.com/dariacz12",
     images: [
       { name: "computer.png", caption: "Class management" },
       { name: "avatarDCz.jpg", caption: " Daria" },
@@ -38,7 +40,7 @@ export const projectsList = [
     text: "What is Trello? Trello is the visual tool that empowers your team to manage any type of project, workflow, or task tracking. Add files, checklists, or even automation: Customize it all for how your team works best. Just sign up, create a board, and you’re off!",
     tools: ["React", "TypeScript", "StyledComponents"],
     website: "https://trello.com/",
-    githyb: "https://github.com/dariacz12",
+    github: "https://github.com/dariacz12",
     images: [
       { name: "computer.png", caption: "Class management" },
       { name: "avatarDCz.jpg", caption: " Daria" },
@@ -53,7 +55,7 @@ export const projectsList = [
     text: "What is Trello? Trello is the visual tool that empowers your team to manage any type of project, workflow, or task tracking. Add files, checklists, or even automation: Customize it all for how your team works best. Just sign up, create a board, and you’re off!",
     tools: ["React", "TypeScript", "StyledComponents"],
     website: "https://trello.com/",
-    githyb: "https://github.com/dariacz12",
+    github: "https://github.com/dariacz12",
     images: [
       { name: "computer.png", caption: "Class management" },
       { name: "avatarDCz.jpg", caption: " Daria" },

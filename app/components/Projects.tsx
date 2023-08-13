@@ -36,6 +36,7 @@ const TextBox = styled.div`
   }
 `;
 const ProjectBoxSmall = styled.div`
+  position: relative;
   display: none;
   @media (max-width: ${size.md}) {
     display: flex;
@@ -227,7 +228,7 @@ const Projects = () => {
                     </TextBox>
                   )}
                 </ProjectBox>
-                <ProjectBoxSmall>
+                <ProjectBoxSmall onClick={() => navigate(`/myprojects/${id}`)}>
                   <video
                     style={{ borderRadius: "15px" }}
                     width={"650px"}
