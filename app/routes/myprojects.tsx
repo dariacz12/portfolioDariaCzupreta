@@ -35,9 +35,6 @@ const BoxLine = styled.div`
 `;
 export default function MyProjectsRoute() {
   const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(-1);
-  };
 
   return (
     <MainContainer>

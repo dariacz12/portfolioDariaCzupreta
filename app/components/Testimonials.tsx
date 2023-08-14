@@ -49,7 +49,7 @@ const Slaid = styled.div`
 const testimonialsList = [
   {
     id: 1,
-    name: "Marcik Cieślinski",
+    name: "Marcin Cieślinski",
     position: " Senior Manager | Business Agility Lead ",
     img: "MarcinCieslinski.jpeg",
     testimonialBody:

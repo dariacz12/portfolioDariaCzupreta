@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { useParams } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
@@ -63,6 +63,7 @@ export default function ProjectRoute() {
           .map(
             ({
               projectName,
+              videoName,
               mainInfo,
               text,
               tools,
@@ -85,14 +86,26 @@ export default function ProjectRoute() {
                         loop
                         playsInline
                         muted
-                        src={require(`../../public/video/mainpage.mov`)}
+                        src={videoName}
                       ></video>
                     )}
                   </ProjectBox>
-                  <Text fontSize="md" fontWeight={"medium"} color={"#757575"}>
+                  <Text
+                    pr={{ "2xl": "200px" }}
+                    pl={{ "2xl": "200px" }}
+                    fontSize="md"
+                    fontWeight={"medium"}
+                    color={"#757575"}
+                  >
                     About
                   </Text>
-                  <Text fontSize="sm" color={"#757575"}>
+                  <Text
+                    pr={{ "2xl": "200px" }}
+                    pl={{ "2xl": "200px" }}
+                    lineHeight="170%"
+                    fontSize="sm"
+                    color={"#757575"}
+                  >
                     {" "}
                     {text}{" "}
                   </Text>
@@ -100,9 +113,10 @@ export default function ProjectRoute() {
                 <Box
                   position={"relative"}
                   display={"flex"}
+                  alignItems={"center"}
                   backgroundColor={"#673AB7"}
                   w="100%"
-                  height={"250px"}
+                  height={{ base: "430px", md: "300px", lg: "350px" }}
                 >
                   <Box
                     zIndex={1}
@@ -112,105 +126,127 @@ export default function ProjectRoute() {
                     flexDirection={"column"}
                   >
                     <TextWrap>
-                      <Text color={"white"} fontWeight={"medium"} fontSize="md">
-                        Technologies
-                      </Text>
-                      <Box style={{ display: "flex", paddingTop: "15px" }}>
-                        {tools.map((tool) => (
-                          //   <Box shadow={'md'}>
-                          <Box
-                            fontSize={"sm"}
-                            borderRadius={"8px"}
-                            padding={"10px"}
-                            backgroundColor={"#D1C4E9"}
-                            mr={"15px"}
-                            color={"white"}
-                            fontWeight={"medium"}
-                          >
-                            <div style={{ textShadow: "#673AB7 1px 0 15px;" }}>
-                              {tool}
-                            </div>
-                          </Box>
-                          // </Box>
-                        ))}
-                      </Box>
-                      <Box paddingTop={"50px"} display={"flex"}>
-                        <Box paddingRight={"100px"}>
-                          <Text
-                            color={"white"}
-                            fontWeight={"medium"}
-                            fontSize="md"
-                          >
-                            Website
-                          </Text>
-                          <Text
-                            fontSize="sm"
-                            fontWeight={"medium"}
-                            color={"white"}
-                          >
-                            {" "}
-                            {website}{" "}
-                          </Text>
+                      <Box pr={{ "2xl": "200px" }} pl={{ "2xl": "200px" }}>
+                        <Text
+                          color={"white"}
+                          fontWeight={"medium"}
+                          fontSize="md"
+                        >
+                          Technologies
+                        </Text>
+                        <Box
+                          style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            paddingTop: "15px",
+                          }}
+                        >
+                          {tools.map((tool) => (
+                            <Box
+                              fontSize={"sm"}
+                              borderRadius={"8px"}
+                              padding={"10px"}
+                              marginTop={"15px"}
+                              marginRight={"15px"}
+                              backgroundColor={"#D1C4E9"}
+                              color={"white"}
+                              fontWeight={"medium"}
+                            >
+                              <div
+                                style={{ textShadow: "#673AB7 1px 0 15px;" }}
+                              >
+                                {tool}
+                              </div>
+                            </Box>
+                          ))}
                         </Box>
-                        <Box>
-                          <Text
-                            color={"white"}
-                            fontWeight={"medium"}
-                            fontSize="md"
-                          >
-                            {" "}
-                            GitHub
-                          </Text>
-                          <Text
-                            fontSize="sm"
-                            fontWeight={"medium"}
-                            color={"white"}
-                          >
-                            {" "}
-                            {github}{" "}
-                          </Text>
+                        <Box display={"flex"} flexWrap={"wrap"}>
+                          <Box paddingTop={"25px"} paddingRight={"100px"}>
+                            <Text
+                              color={"white"}
+                              fontWeight={"medium"}
+                              fontSize="md"
+                            >
+                              Website
+                            </Text>
+                            <Link
+                              fontSize="sm"
+                              fontWeight={"medium"}
+                              color={"white"}
+                              href={`${website}`}
+                              isExternal
+                            >
+                              {" "}
+                              {website}{" "}
+                            </Link>
+                          </Box>
+                          <Box paddingTop={"25px"}>
+                            <Text
+                              color={"white"}
+                              fontWeight={"medium"}
+                              fontSize="md"
+                            >
+                              {" "}
+                              GitHub
+                            </Text>
+                            <Link
+                              fontSize="sm"
+                              fontWeight={"medium"}
+                              color={"white"}
+                              href={`${github}`}
+                              isExternal
+                            >
+                              {" "}
+                              {github}{" "}
+                            </Link>
+                          </Box>
                         </Box>
                       </Box>
                     </TextWrap>
                   </Box>
                 </Box>
 
-                <TextWrap>
-                  <Box
-                    display={"flex"}
-                    alignContent={"center"}
-                    justifyContent={"center"}
-                    flexDirection={"row"}
-                    flexWrap={"wrap"}
-                  >
-                    {paramId &&
-                      projectsList &&
-                      images?.map(({ name, caption }) => {
-                        return (
-                          <Box
-                            display={"flex"}
-                            flexDirection={"column"}
-                            alignItems={"center"}
-                            justifyContent={"center"}
+                {/* <TextWrap> */}
+                <Box
+                  display={"flex"}
+                  alignContent={"center"}
+                  justifyContent={"center"}
+                  flexDirection={"row"}
+                  flexWrap={"wrap"}
+                  p={"35"}
+                >
+                  {paramId &&
+                    projectsList &&
+                    images?.map(({ name, caption }) => {
+                      return (
+                        <Box
+                          p={"30px"}
+                          display={"flex"}
+                          flexDirection={"column"}
+                          alignItems={"center"}
+                          justifyContent={"center"}
+                        >
+                          <Image
+                            style={{ borderRadius: "15px" }}
+                            src={`/${name}`}
+                            mb={"30px"}
+                            width={{ md: "950px", sm: "500px" }}
+                          />
+                          <Text
+                            fontSize="sm"
+                            color={"#757575"}
+                            fontWeight={"medium"}
+                            textAlign={"center"}
+                            pb={"5"}
                           >
-                            <Image
-                              src={`/${name}`}
-                              p={"30px"}
-                              width={{ md: "550px", sm: "300px" }}
-                            />
-                            <Text
-                              fontSize="sm"
-                              color={"#757575"}
-                              fontWeight={"medium"}
-                            >
-                              {" "}
-                              {caption}{" "}
-                            </Text>
-                          </Box>
-                        );
-                      })}
-                  </Box>
-                </TextWrap>
+                            {" "}
+                            {caption}{" "}
+                          </Text>
+                        </Box>
+                      );
+                    })}
+                </Box>
+                {/* </TextWrap> */}
               </Box>
             )
           )}

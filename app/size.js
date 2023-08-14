@@ -9,10 +9,10 @@ const customeTheme = extendTheme({
     md: "48em",
     lg: "62em",
     xl: "80em",
+    "2xl": "124em",
+    // "3xl":"1280px"
   },
 });
-
-const theme = extendTheme({ customeTheme });
 
 export default customeTheme;
 
@@ -21,4 +21,5 @@ export const size = {
   md: "48em",
   lg: "62em",
   xl: "80em",
+  "3xl": "99em",
 };

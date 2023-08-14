@@ -12,6 +12,7 @@ import {
 import { MetaFunction, LinksFunction } from "@remix-run/node";
 
 import { ServerStyleContext, ClientStyleContext } from "./context";
+import customeTheme from "./size";
 
 export let links: LinksFunction = () => {
   return [
@@ -73,7 +74,7 @@ const Document = withEmotionCache(
 export default function App() {
   return (
     <Document>
-      <ChakraProvider>
+      <ChakraProvider theme={customeTheme}>
         <Outlet />
         <LiveReload />
       </ChakraProvider>

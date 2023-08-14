@@ -9,6 +9,7 @@ import { projectsList } from "~/listOfProjects";
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 `;
 const ProjectBox = styled.div`
   position: relative;
@@ -22,25 +23,31 @@ const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   pointer-events: none;
-
+  width: 100%;
+  background-color: rgba(6, 0, 6, 0.5);
   position: absolute;
-  bottom: 90px;
-  left: 100px;
+  bottom: 0px;
+  padding-left: 100px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   @media (max-width: ${size.sm}) {
-    bottom: 50px;
-    left: 50px;
+    bottom: 0px;
+    padding-left: 50px;
   }
   @media (max-width: ${size.md}) {
-    bottom: 50px;
-    left: 50px;
+    bottom: 0px;
+    padding-left: 50px;
   }
 `;
+
 const ProjectBoxSmall = styled.div`
   position: relative;
   display: none;
   @media (max-width: ${size.md}) {
     display: flex;
-    margin: 40px;
+    margin: 20px;
   }
 `;
 
@@ -188,42 +195,51 @@ const Projects = () => {
                     loop
                     playsInline
                     muted
-                    src={require(`../../public/video/mainpage.mov`)}
+                    src={videoName}
                   ></video>
 
                   {textBoxVisibility[id] && (
                     <TextBox>
-                      <Heading
-                        mb={"10px"}
-                        color={"white"}
-                        textShadow={"lg"}
-                        as="h4"
-                        fontSize={{ lg: "lg", md: "md", sm: "sm" }}
-                      >
-                        {projectName}
-                      </Heading>
-                      <Text
-                        mb={"10px"}
-                        color={"white"}
-                        fontSize={{ lg: "lg", md: "md", sm: "sm" }}
-                        textShadow={"2xl"}
-                      >
-                        {mainInfo}
-                      </Text>
-                      <Box style={{ display: "flex" }}>
-                        {tools.map((tool) => (
-                          <Text
-                            fontSize={{ sm: "xs", base: "sm" }}
-                            borderRadius={"5px"}
-                            padding={"5px"}
-                            backgroundColor={"#D1C4E9"}
-                            mr={"8px"}
-                            color={"white"}
-                            textShadow={"lg"}
-                          >
-                            {tool}
-                          </Text>
-                        ))}
+                      <Box>
+                        <Heading
+                          mb={"10px"}
+                          color={"white"}
+                          textShadow={"lg"}
+                          as="h4"
+                          fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                        >
+                          {projectName}
+                        </Heading>
+                        <Text
+                          mb={"10px"}
+                          color={"white"}
+                          fontSize={{ lg: "md", md: "md", sm: "sm" }}
+                          textShadow={"2xl"}
+                          pr={"20px"}
+                        >
+                          {mainInfo}
+                        </Text>
+                        <Box
+                          style={{ display: "flex" }}
+                          position={"relative"}
+                          zIndex={2}
+                        >
+                          {tools
+                            .filter((tool) => tools.indexOf(tool) <= 4)
+                            .map((tool) => (
+                              <Text
+                                fontSize={{ sm: "xs", base: "sm" }}
+                                borderRadius={"5px"}
+                                padding={"5px"}
+                                backgroundColor={"#673AB7"}
+                                mr={"8px"}
+                                color={"white"}
+                                textShadow={"lg"}
+                              >
+                                {tool}
+                              </Text>
+                            ))}
+                        </Box>
                       </Box>
                     </TextBox>
                   )}
@@ -232,7 +248,7 @@ const Projects = () => {
                   <video
                     style={{ borderRadius: "15px" }}
                     width={"650px"}
-                    src={require(`../../public/video/mainpage.mov`)}
+                    src={videoName}
                   ></video>
                   <TextBox>
                     <Heading
@@ -249,23 +265,26 @@ const Projects = () => {
                       color={"white"}
                       fontSize={"sm"}
                       textShadow={"2xl"}
+                      pr={"30px"}
                     >
                       {mainInfo}
                     </Text>
                     <Box style={{ display: "flex" }}>
-                      {tools.map((tool) => (
-                        <Text
-                          fontSize={"xs"}
-                          borderRadius={"5px"}
-                          padding={"5px"}
-                          backgroundColor={"#D1C4E9"}
-                          mr={"8px"}
-                          color={"white"}
-                          textShadow={"lg"}
-                        >
-                          {tool}
-                        </Text>
-                      ))}
+                      {tools
+                        .filter((tool) => tools.indexOf(tool) <= 3)
+                        .map((tool) => (
+                          <Text
+                            fontSize={"xs"}
+                            borderRadius={"5px"}
+                            padding={"5px"}
+                            backgroundColor={"#673AB7"}
+                            mr={"8px"}
+                            color={"white"}
+                            textShadow={"lg"}
+                          >
+                            {tool}
+                          </Text>
+                        ))}
                     </Box>
                   </TextBox>
                 </ProjectBoxSmall>
