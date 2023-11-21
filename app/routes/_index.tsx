@@ -39,7 +39,7 @@ const _index = () => {
       </HighlightsContainer>
       <Projects />
       <Testimonials />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </MainContainer>
   );

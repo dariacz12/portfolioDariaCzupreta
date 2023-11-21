@@ -33,9 +33,9 @@ const BurgerMenuItem = () => {
           <MenuItem onClick={() => handleClickScroll("#testimonials")}>
             Testimonials
           </MenuItem>
-          <MenuItem onClick={() => handleClickScroll("#contact")}>
+          {/* <MenuItem onClick={() => handleClickScroll("#contact")}>
             Contact
-          </MenuItem>
+          </MenuItem> */}
         </MenuList>
       </Menu>
     </Box>

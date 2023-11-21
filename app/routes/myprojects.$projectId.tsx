@@ -226,12 +226,21 @@ export default function ProjectRoute() {
                           alignItems={"center"}
                           justifyContent={"center"}
                         >
+                            {paramId === "1" &&<Image
+                            style={{ borderRadius: "15px" }}
+                            src={`/${name}`}
+                            mb={"30px"}
+                            width={{ md: "300px", sm: "200px" }}
+                          />
+
+                            }
+                            {paramId !== "1" &&
                           <Image
                             style={{ borderRadius: "15px" }}
                             src={`/${name}`}
                             mb={"30px"}
                             width={{ md: "950px", sm: "500px" }}
-                          />
+                          />}
                           <Text
                             fontSize="sm"
                             color={"#757575"}

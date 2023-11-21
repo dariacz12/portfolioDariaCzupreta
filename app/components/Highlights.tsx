@@ -60,6 +60,10 @@ const Highlights = () => {
           </Text>
           <Text fontSize="md" pt={"3px"}>
             {" "}
+            Elementor Pro
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            {" "}
             Mocha, SCSS, Axios
           </Text>
           <Text

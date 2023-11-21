@@ -21,6 +21,7 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 40px;
 
   @media (max-width: ${size.md}) {
     padding-top: 0px;
@@ -32,6 +33,8 @@ const WrapSlaid = styled.div`
   justify-content: center;
   margin-right: 50px;
   margin-left: 50px;
+  max-height: 500px;
+  max-width: 800px;
 `;
 const DotsWrapper = styled.div`
   display: flex;
@@ -49,27 +52,29 @@ const Slaid = styled.div`
 const testimonialsList = [
   {
     id: 1,
+    name: "Radosław Michalak",
+    position: "Właściciel Swiplo",
+    img: "RadosławMichalak.jpeg",
+    testimonialBody:
+      "Jestem mega zadowolony ze współpracy z Darią przy przepisywaniu naszej aplikacji mobilnej Swiplo. Nowa wersja wygląda teraz jeszcze lepiej, działa też wydajniej i ma więcej fajnych opcji. Polecam Darię każdemu, kto szuka frontend developera, który naprawdę wczuwa się w biznesowe potrzeby klienta.",
+  },
+   
+  {
+    id: 2,
     name: "Marcin Cieślinski",
     position: " Senior Manager | Business Agility Lead ",
     img: "MarcinCieslinski.jpeg",
     testimonialBody:
       "I have worked with Daria on several projects. Daria proved herself as a very effective and motivated person. She is always ready to take on any challenge brought in her way. Her willingness to learn and apply the new knowledge are extraordinary.",
   },
-  {
-    id: 2,
-    name: "Marta Wawrzyniak - Falkowska",
-    position: " Service Designer",
-    img: "MartaWawrzyniakFalkowska.jpeg",
-    testimonialBody:
-      "Bardzo się cieszę, że miałam okazję pracować z Darią. Szybko i dobrze zorientowała się w zespole projektowym, do którego wpadła w samym środku projektu. Konstruktywnie podchodzi do każdego nowego wyzwania.",
-  },
+   
   {
     id: 3,
     name: "Rafał Pikuła",
     position: "Project Manager",
     img: "RafalPikula.jpeg",
     testimonialBody:
-      "Daria dała się poznać jako osoba bardzo mocno skoncentrowana na osiąganiu założonych celów. Realizując zróżnicowane projekty z zakresu Digital Signage zawsze wykazywała się wysokim zaangażowaniem oraz profesjonalizmem. Cechował ją spokój i skrupulatność.",
+      "Daria dała się poznać jako osoba bardzo mocno skoncentrowana na osiąganiu założonych celów. Realizując zróżnicowane projekty z zakresu Digital Signage zawsze wykazywała się wysokim zaangażowaniem oraz profesjonalizmem.",
   },
 ];
 const Testimonials = () => {
@@ -90,7 +95,7 @@ const Testimonials = () => {
     setcurrentIndex(slideIndex);
   };
   return (
-    <MainContainer id={"testimonials"}>
+    <MainContainer id={"testimonials"} >
       <Heading as="h6" size="lg" mb={"20px"} mt={"20px"}>
         {" "}
         Testimonials{" "}
