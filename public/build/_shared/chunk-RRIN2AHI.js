@@ -1,0 +1,139 @@
+import {
+  createHotContext
+} from "/build/_shared/chunk-7HCXXYEW.js";
+import {
+  __commonJS
+} from "/build/_shared/chunk-PNG5AS42.js";
+
+// video/theswiplovideo.mov
+var require_theswiplovideo = __commonJS({
+  "video/theswiplovideo.mov"(exports, module) {
+    module.exports = "/build/_assets/theswiplovideo-DMBC2LOW.mov";
+  }
+});
+
+// video/programming_cars_hub_video.mov
+var require_programming_cars_hub_video = __commonJS({
+  "video/programming_cars_hub_video.mov"(exports, module) {
+    module.exports = "/build/_assets/programming_cars_hub_video-2DH3FVCL.mov";
+  }
+});
+
+// video/thetaskservideo.mov
+var require_thetaskservideo = __commonJS({
+  "video/thetaskservideo.mov"(exports, module) {
+    module.exports = "/build/_assets/thetaskservideo-V5TBJF57.mov";
+  }
+});
+
+// video/handmade.mov
+var require_handmade = __commonJS({
+  "video/handmade.mov"(exports, module) {
+    module.exports = "/build/_assets/handmade-GKPJSP66.mov";
+  }
+});
+
+// app/listOfProjects.ts
+if (import.meta) {
+  import.meta.hot = createHotContext(
+    //@ts-expect-error
+    "app/listOfProjects.ts"
+  );
+  import.meta.hot.lastModified = "1700490990671.1348";
+}
+var projectsList = [
+  {
+    id: 1,
+    type: "app",
+    videoName: require_theswiplovideo(),
+    projectName: "Swiplo",
+    mainInfo: "Sign up for classes with the Swiplo mobile app",
+    text: "The e-pass for customers using the package with the mobile application allows you to easily and quickly reflect the entrance by scanning the QR code by the reception employee. No more paper passes or magnetic cards that fill up your wallet! Push notifications allow you to quickly and cost-free communicate with clients of selected classes or with all students of the school. You can check who is using the application in the system. Everything that matters most is in your phone: push notifications, enrollment for classes, salary calculation, ONLINE payments, subscription form, SMS gate",
+    tools: [
+      "React Native",
+      "TypeScript",
+      " JavaScript",
+      "NativeBase",
+      "React Query",
+      "React Hook Form",
+      "Expo"
+    ],
+    website: "https://apps.apple.com/pl/app/swiplo/id1571483642",
+    github: "",
+    images: [
+      { name: "swiplo-kalendarz-app.png", caption: "Calendar" },
+      { name: "swiplo-zajecia-app.png", caption: " Classes" },
+      { name: "swiplo-aktywne-karnety-app.png", caption: "Active passes" },
+      { name: "swiplo-aktualnosci-aplikacja.png", caption: "Application news" }
+    ]
+  },
+  {
+    id: 2,
+    type: "webpage",
+    videoName: require_programming_cars_hub_video(),
+    projectName: "Programming Cards' Hub",
+    mainInfo: "Programming flashcards that will help you prepare for a job interview",
+    text: "Flashcards with JavaScript for the price of an hour of work for a senior! Expand your knowledge based on the most frequently asked recruitment questions. Technical interviews will no longer be a problem!",
+    tools: ["Wordpress", "Woocommerce", "Elementor Pro"],
+    website: "https://fiszki-z-programowania.pl/",
+    github: "https://github.com/dariacz12",
+    images: [
+      { name: "programming_cars_hub1.png", caption: "Main page" },
+      { name: "programming_cars_hub2.png", caption: "Product benefits with 3D box illustration that can be moved" },
+      { name: "programming_cars_hub3.png", caption: "Presentation of the components of the flashcard" },
+      { name: "programming_cars_hub4.png", caption: "Product shop" }
+    ]
+  },
+  {
+    id: 3,
+    type: "webpage",
+    videoName: require_thetaskservideo(),
+    projectName: "Taskser",
+    mainInfo: "The visual tool that empowers to manage any type of project",
+    text: "What is Taskser? In Taskser you can create boards, where you are able to add as many lists with diffrent tasks as you like. Whatever the project or process, boards keep tasks organized and work moving forward. Cards represent tasks and can hold all the information you need to get the job done. As you make progress, move cards across lists to show their status. At a glance, you can see everything from 'things to do' to 'aww yeah I did it!'- the diffrent stages of a task. Start as simple as To DO, Doing, or Done - or build a workflow custom fit your needs. Tasker offers adding files, checklists, covers, and many other actions with tasks. Just sign up, create a board, and you\u2019re off! Simple, flexible, and powerful. All it takes are boards, lists, and cards to get a clear view of what needs to get done.",
+    tools: [
+      "React",
+      "TypeScript",
+      "React Query",
+      "React Router Dom",
+      "React Hook Form",
+      "Chakra UI",
+      "StyledComponents",
+      "Strapi"
+    ],
+    website: "",
+    github: "https://github.com/dariacz12/canban-app",
+    images: [
+      { name: "phototskser1.png", caption: "Login page" },
+      { name: "phototskser2.png", caption: " Adding checklist to the task" },
+      {
+        name: "phototskser3.png",
+        caption: "Main page with list of boards and 'Create New Board' Button"
+      },
+      { name: "phototskser4.png", caption: " Settings page" }
+    ]
+  },
+  //   
+  {
+    id: 4,
+    type: "webpage",
+    videoName: require_handmade(),
+    projectName: "Irena's Handmade",
+    mainInfo: "Explore the unique world of fairy tale with Irena's handmade products",
+    text: "Welcome to Irena's Handmade, a haven for those who appreciate the beauty and uniqueness of handmade creations. Our business card webpage opens the door to a world where creativity knows no bounds, and each item is a testament to the passion and dedication of our skilled artisan, Irena. Our business card webpage is a portal to a world where tradition meets innovation, where ancient crafting techniques are given a contemporary twist, and where each product resonates with the heart and soul of its creator.",
+    tools: ["React", "TypeScript", "StyledComponents", "FireBase"],
+    website: "",
+    github: "",
+    images: [
+      { name: "handmade1.png", caption: "Product sub-page" },
+      { name: "handmade2.png", caption: "Home page slider" },
+      { name: "handmade3.png", caption: "List of the most purchased products" },
+      { name: "handmade4.png", caption: "Product categories" }
+    ]
+  }
+];
+
+export {
+  projectsList
+};
+//# sourceMappingURL=/build/_shared/chunk-RRIN2AHI.js.map
