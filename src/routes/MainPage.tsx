@@ -6,7 +6,7 @@ import Highlights from "../components/Highlights";
 import MainInfo from "../components/MainInfo";
 import Projects from "../components/Projects";
 import Testimonials from "../components/Testimonials";
-import size from "../size"
+import size from "../size";
 const MainContainer = styled.div`
   min-height: 100vh;
   position: relative;
@@ -27,8 +27,8 @@ const MainPage = () => {
       <Box pl={25} zIndex={1} top={"355px"} position="absolute">
         <Image
           src="/codelinesvertical.png"
-          pt={{  sm: "10px", md: "0px" }}
-          height={{ md: "230px", sm: "220px" }}
+          pt={{ base: "10px", md: "0px" }}
+          height={{ md: "230px", base: "220px" }}
           visibility={{ base: "visible", lg: "hidden" }}
         />
       </Box>

@@ -1,6 +1,4 @@
-import {
-  require_jsx_runtime
-} from "/build/_shared/chunk-NMZL6IDN.js";
+import { require_jsx_runtime } from "/build/_shared/chunk-NMZL6IDN.js";
 import "/build/_shared/chunk-BOXFZXVX.js";
 import "/build/_shared/chunk-PNG5AS42.js";
 export default require_jsx_runtime();

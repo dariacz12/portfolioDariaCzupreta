@@ -8,7 +8,6 @@ import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
-
 const TextWrap = styled.div`
   padding-left: 350px;
   padding-right: 350px;
@@ -89,226 +88,243 @@ export default function ProjectRoute() {
   const navigate = useNavigate();
   return (
     <MainContainer>
-    <HeaderBox>
-      <ChevronLeftIcon
-        onClick={() => navigate(-1)}
-        cursor={"pointer"}
-        backgroundColor={"#D1C4E9"}
-        color={"white"}
-        boxSize={8}
-        borderRadius="full"
-      />
-    </HeaderBox>
-    <BoxLine></BoxLine>
-    <Box>
-     
-    
-    <Box>
-      {paramId &&
-        projectsList
-          .filter(({ id }) => id === Number(paramId))
-          .map(
-            ({
-              projectName,
-              videoName,
-              mainInfo,
-              text,
-              tools,
-              website,
-              github,
-              images,
-            }) => (
-              <Box display={"flex"} flexDirection={"column"}>
-                <TextWrap>
-                  <Heading as="h3" size="xl" my={5}>
-                    {projectName}
-                  </Heading>
-                  <Text fontSize="md">{mainInfo}</Text>
-                  <ProjectBox>
-                    {pageLoaded && (
-                      <video
-                        style={{ borderRadius: "15px" }}
-                        autoPlay={true}
-                        ref={videoRef}
-                        loop
-                        playsInline
-                        muted
-                        src={videoName}
-                      ></video>
-                    )}
-                  </ProjectBox>
-                  <Text
-                    pr={{ "2xl": "200px" }}
-                    pl={{ "2xl": "200px" }}
-                    fontSize="md"
-                    fontWeight={"medium"}
-                    color={"#757575"}
-                  >
-                    About
-                  </Text>
-                  <Text
-                    pr={{ "2xl": "200px" }}
-                    pl={{ "2xl": "200px" }}
-                    lineHeight="170%"
-                    fontSize="sm"
-                    color={"#757575"}
-                  >
-                    {" "}
-                    {text}{" "}
-                  </Text>
-                </TextWrap>
-                <Box
-                  position={"relative"}
-                  display={"flex"}
-                  alignItems={"center"}
-                  backgroundColor={"#673AB7"}
-                  w="100%"
-                  height={{ base: "430px", md: "300px", lg: "350px" }}
-                >
-                  <Box
-                    zIndex={1}
-                    position={"absolute"}
-                    alignContent={"start"}
-                    display={"flex"}
-                    flexDirection={"column"}
-                  >
+      <HeaderBox>
+        <ChevronLeftIcon
+          onClick={() => navigate(-1)}
+          cursor={"pointer"}
+          backgroundColor={"#D1C4E9"}
+          color={"white"}
+          boxSize={8}
+          borderRadius="full"
+        />
+      </HeaderBox>
+      <BoxLine></BoxLine>
+      <Box>
+        <Box>
+          {paramId &&
+            projectsList
+              .filter(({ id }) => id === Number(paramId))
+              .map(
+                ({
+                  projectName,
+                  videoName,
+                  mainInfo,
+                  text,
+                  tools,
+                  website,
+                  github,
+                  images,
+                }) => (
+                  <Box display={"flex"} flexDirection={"column"}>
                     <TextWrap>
-                      <Box pr={{ "2xl": "200px" }} pl={{ "2xl": "200px" }}>
-                        <Text
-                          color={"white"}
-                          fontWeight={"medium"}
-                          fontSize="md"
-                        >
-                          Technologies
-                        </Text>
-                        <Box
-                          style={{
-                            display: "flex",
-                            flexWrap: "wrap",
-                            paddingTop: "15px",
-                          }}
-                        >
-                          {tools.map((tool) => (
-                            <Box
-                              fontSize={"sm"}
-                              borderRadius={"8px"}
-                              padding={"10px"}
-                              marginTop={"15px"}
-                              marginRight={"15px"}
-                              backgroundColor={"#D1C4E9"}
-                              color={"white"}
-                              fontWeight={"medium"}
-                            >
-                              <div
-                                style={{ textShadow: "#673AB7 1px 0 15px;" }}
-                              >
-                                {tool}
-                              </div>
-                            </Box>
-                          ))}
-                        </Box>
-                        <Box display={"flex"} flexWrap={"wrap"}>
-                          <Box paddingTop={"25px"} paddingRight={"100px"}>
-                            <Text
-                              color={"white"}
-                              fontWeight={"medium"}
-                              fontSize="md"
-                            >
-                              Website
-                            </Text>
-                            <Link
-                              fontSize="sm"
-                              fontWeight={"medium"}
-                              color={"white"}
-                              href={`${website}`}
-                              isExternal
-                            >
-                              {" "}
-                              {website}{" "}
-                            </Link>
-                          </Box>
-                          <Box paddingTop={"25px"}>
-                            <Text
-                              color={"white"}
-                              fontWeight={"medium"}
-                              fontSize="md"
-                            >
-                              {" "}
-                              GitHub
-                            </Text>
-                            <Link
-                              fontSize="sm"
-                              fontWeight={"medium"}
-                              color={"white"}
-                              href={`${github}`}
-                              isExternal
-                            >
-                              {" "}
-                              {github}{" "}
-                            </Link>
-                          </Box>
-                        </Box>
-                      </Box>
+                      <Heading as="h3" size="xl" my={5}>
+                        {projectName}
+                      </Heading>
+                      <Text fontSize="md">{mainInfo}</Text>
+                      <ProjectBox>
+                        {pageLoaded && (
+                          <video
+                            style={{ borderRadius: "15px" }}
+                            autoPlay={true}
+                            ref={videoRef}
+                            loop
+                            playsInline
+                            muted
+                            src={videoName}
+                          ></video>
+                        )}
+                      </ProjectBox>
+                      <Text
+                        pr={{ "2xl": "200px" }}
+                        pl={{ "2xl": "200px" }}
+                        fontSize="md"
+                        fontWeight={"medium"}
+                        color={"#757575"}
+                      >
+                        About the Project
+                      </Text>
+                      <Text
+                        pr={{ "2xl": "200px" }}
+                        pl={{ "2xl": "200px" }}
+                        lineHeight="170%"
+                        fontSize="sm"
+                        color={"#757575"}
+                      >
+                        {" "}
+                        {text}{" "}
+                      </Text>
                     </TextWrap>
+                    <Box
+                      position={"relative"}
+                      display={"flex"}
+                      alignItems={"center"}
+                      backgroundColor={"#673AB7"}
+                      w="100%"
+                      height={{ base: "430px", md: "300px", lg: "350px" }}
+                    >
+                      <Box
+                        zIndex={1}
+                        position={"absolute"}
+                        alignContent={"start"}
+                        display={"flex"}
+                        flexDirection={"column"}
+                      >
+                        <TextWrap>
+                          <Box pr={{ "2xl": "200px" }} pl={{ "2xl": "200px" }}>
+                            <Text
+                              color={"white"}
+                              fontWeight={"medium"}
+                              fontSize="md"
+                            >
+                              Technologies
+                            </Text>
+                            <Box
+                              style={{
+                                display: "flex",
+                                flexWrap: "wrap",
+                                paddingTop: "15px",
+                              }}
+                            >
+                              {tools.map((tool) => (
+                                <Box
+                                  fontSize={"sm"}
+                                  borderRadius={"8px"}
+                                  padding={"10px"}
+                                  marginTop={"15px"}
+                                  marginRight={"15px"}
+                                  backgroundColor={"#D1C4E9"}
+                                  color={"white"}
+                                  fontWeight={"medium"}
+                                >
+                                  <div
+                                    style={{
+                                      textShadow: "#673AB7 1px 0 15px;",
+                                    }}
+                                  >
+                                    {tool}
+                                  </div>
+                                </Box>
+                              ))}
+                            </Box>
+                            <Box display={"flex"} flexWrap={"wrap"}>
+                              <Box paddingTop={"25px"} paddingRight={"100px"}>
+                                <Text
+                                  color={"white"}
+                                  fontWeight={"medium"}
+                                  fontSize="md"
+                                >
+                                  Website
+                                </Text>
+                                <Link
+                                  fontSize="sm"
+                                  fontWeight={"medium"}
+                                  color={"white"}
+                                  href={`${website}`}
+                                  isExternal
+                                >
+                                  {" "}
+                                  {website}{" "}
+                                </Link>
+                              </Box>
+                              <Box paddingTop={"25px"}>
+                                <Text
+                                  color={"white"}
+                                  fontWeight={"medium"}
+                                  fontSize="md"
+                                >
+                                  {" "}
+                                  GitHub
+                                </Text>
+                                <Link
+                                  fontSize="sm"
+                                  fontWeight={"medium"}
+                                  color={"white"}
+                                  href={`${github}`}
+                                  isExternal
+                                >
+                                  {" "}
+                                  {github}{" "}
+                                </Link>
+                              </Box>
+                            </Box>
+                          </Box>
+                        </TextWrap>
+                      </Box>
+                    </Box>
+
+                    {/* <TextWrap> */}
+                    <Box
+                      display={"flex"}
+                      alignContent={"center"}
+                      justifyContent={"center"}
+                      flexDirection={"row"}
+                      flexWrap={"wrap"}
+                      p={"35"}
+                    >
+                      {paramId &&
+                        projectsList &&
+                        images?.map(({ name, caption }) => {
+                          return (
+                            <Box
+                              p={"30px"}
+                              display={"flex"}
+                              flexDirection={"column"}
+                              alignItems={"center"}
+                              justifyContent={"center"}
+                            >
+                              {paramId === "1" && (
+                                <Image
+                                  style={{ borderRadius: "15px" }}
+                                  src={`/${name}`}
+                                  mb={"30px"}
+                                  width={{ md: "300px", base: "200px" }}
+                                />
+                              )}
+                              {paramId === "2" && (
+                                <video
+                                  style={{
+                                    borderRadius: "15px",
+                                    marginBottom: "15px",
+                                    width: "300px",
+                                  }}
+                                  autoPlay={true}
+                                  ref={videoRef}
+                                  loop
+                                  playsInline
+                                  muted
+                                  src={`/${name}`}
+                                ></video>
+                              )}
+
+                              {paramId !== "1" && paramId !== "2" && (
+                                <Image
+                                  style={{ borderRadius: "15px" }}
+                                  src={`/${name}`}
+                                  mb={"30px"}
+                                  width={{ md: "950px", base: "500px" }}
+                                />
+                              )}
+                              <Text
+                                fontSize="sm"
+                                color={"#757575"}
+                                fontWeight={"medium"}
+                                textAlign={"center"}
+                                pb={"5"}
+                              >
+                                {" "}
+                                {caption}{" "}
+                              </Text>
+                            </Box>
+                          );
+                        })}
+                    </Box>
+                    {/* </TextWrap> */}
                   </Box>
-                </Box>
-
-                {/* <TextWrap> */}
-                <Box
-                  display={"flex"}
-                  alignContent={"center"}
-                  justifyContent={"center"}
-                  flexDirection={"row"}
-                  flexWrap={"wrap"}
-                  p={"35"}
-                >
-                  {paramId &&
-                    projectsList &&
-                    images?.map(({ name, caption }) => {
-                      return (
-                        <Box
-                          p={"30px"}
-                          display={"flex"}
-                          flexDirection={"column"}
-                          alignItems={"center"}
-                          justifyContent={"center"}
-                        >
-                            {paramId === "1" &&<Image
-                            style={{ borderRadius: "15px" }}
-                            src={`/${name}`}
-                            mb={"30px"}
-                            width={{ md: "300px", sm: "200px" }}
-                          />
-
-                            }
-                            {paramId !== "1" &&
-                          <Image
-                            style={{ borderRadius: "15px" }}
-                            src={`/${name}`}
-                            mb={"30px"}
-                            width={{ md: "950px", sm: "500px" }}
-                          />}
-                          <Text
-                            fontSize="sm"
-                            color={"#757575"}
-                            fontWeight={"medium"}
-                            textAlign={"center"}
-                            pb={"5"}
-                          >
-                            {" "}
-                            {caption}{" "}
-                          </Text>
-                        </Box>
-                      );
-                    })}
-                </Box>
-                {/* </TextWrap> */}
-              </Box>
-            )
-          )}
-    </Box>
-    </Box>
-    <Footer />
-  </MainContainer>
+                ),
+              )}
+        </Box>
+      </Box>
+      <Footer />
+    </MainContainer>
   );
 }

@@ -47,7 +47,7 @@ import {
   useRouteLoaderData,
   useSearchParams,
   useSubmit,
-  useTransition
+  useTransition,
 } from "/build/_shared/chunk-MXG4W4FK.js";
 import "/build/_shared/chunk-7HCXXYEW.js";
 import "/build/_shared/chunk-UWV35TSL.js";
@@ -102,6 +102,6 @@ export {
   useRouteLoaderData,
   useSearchParams,
   useSubmit,
-  useTransition
+  useTransition,
 };
 //# sourceMappingURL=/build/_shared/esm-7TJB7Q4C.js.map

@@ -1,1 +1,81 @@
-window.__remixManifest={"entry":{"module":"/build/entry.client-IBTU7K7S.js","imports":["/build/_shared/chunk-SLOXJI4L.js","/build/_shared/chunk-BD4Y5PPP.js","/build/_shared/chunk-MXG4W4FK.js","/build/_shared/chunk-7HCXXYEW.js","/build/_shared/chunk-UWV35TSL.js","/build/_shared/chunk-XU7DNSPJ.js","/build/_shared/chunk-GIAAE3CH.js","/build/_shared/chunk-BOXFZXVX.js","/build/_shared/chunk-PNG5AS42.js"]},"routes":{"root":{"id":"root","path":"","module":"/build/root-TAOUWXMW.js","imports":["/build/_shared/chunk-G3CXWJSJ.js","/build/_shared/chunk-NMZL6IDN.js"],"hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false},"routes/_index":{"id":"routes/_index","parentId":"root","index":true,"module":"/build/routes/_index-EH3TK3WY.js","imports":["/build/_shared/chunk-RRIN2AHI.js","/build/_shared/chunk-2CZMDNUZ.js","/build/_shared/chunk-I7BREEDM.js"],"hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false},"routes/myprojects":{"id":"routes/myprojects","parentId":"root","path":"myprojects","module":"/build/routes/myprojects-DT4J4Z4R.js","imports":["/build/_shared/chunk-2CZMDNUZ.js","/build/_shared/chunk-I7BREEDM.js"],"hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false},"routes/myprojects.$projectId":{"id":"routes/myprojects.$projectId","parentId":"routes/myprojects","path":":projectId","module":"/build/routes/myprojects.$projectId-7MJY6OGQ.js","imports":["/build/_shared/chunk-RRIN2AHI.js","/build/_shared/chunk-G3CXWJSJ.js","/build/_shared/chunk-NMZL6IDN.js"],"hasAction":false,"hasLoader":false,"hasCatchBoundary":false,"hasErrorBoundary":false}},"version":"2f833f50","hmr":{"runtime":"/build/_shared/chunk-7HCXXYEW.js","timestamp":1700584561896},"url":"/build/manifest-2F833F50.js"};
+window.__remixManifest = {
+  entry: {
+    module: "/build/entry.client-IBTU7K7S.js",
+    imports: [
+      "/build/_shared/chunk-SLOXJI4L.js",
+      "/build/_shared/chunk-BD4Y5PPP.js",
+      "/build/_shared/chunk-MXG4W4FK.js",
+      "/build/_shared/chunk-7HCXXYEW.js",
+      "/build/_shared/chunk-UWV35TSL.js",
+      "/build/_shared/chunk-XU7DNSPJ.js",
+      "/build/_shared/chunk-GIAAE3CH.js",
+      "/build/_shared/chunk-BOXFZXVX.js",
+      "/build/_shared/chunk-PNG5AS42.js",
+    ],
+  },
+  routes: {
+    root: {
+      id: "root",
+      path: "",
+      module: "/build/root-TAOUWXMW.js",
+      imports: [
+        "/build/_shared/chunk-G3CXWJSJ.js",
+        "/build/_shared/chunk-NMZL6IDN.js",
+      ],
+      hasAction: false,
+      hasLoader: false,
+      hasCatchBoundary: false,
+      hasErrorBoundary: false,
+    },
+    "routes/_index": {
+      id: "routes/_index",
+      parentId: "root",
+      index: true,
+      module: "/build/routes/_index-EH3TK3WY.js",
+      imports: [
+        "/build/_shared/chunk-RRIN2AHI.js",
+        "/build/_shared/chunk-2CZMDNUZ.js",
+        "/build/_shared/chunk-I7BREEDM.js",
+      ],
+      hasAction: false,
+      hasLoader: false,
+      hasCatchBoundary: false,
+      hasErrorBoundary: false,
+    },
+    "routes/myprojects": {
+      id: "routes/myprojects",
+      parentId: "root",
+      path: "myprojects",
+      module: "/build/routes/myprojects-DT4J4Z4R.js",
+      imports: [
+        "/build/_shared/chunk-2CZMDNUZ.js",
+        "/build/_shared/chunk-I7BREEDM.js",
+      ],
+      hasAction: false,
+      hasLoader: false,
+      hasCatchBoundary: false,
+      hasErrorBoundary: false,
+    },
+    "routes/myprojects.$projectId": {
+      id: "routes/myprojects.$projectId",
+      parentId: "routes/myprojects",
+      path: ":projectId",
+      module: "/build/routes/myprojects.$projectId-7MJY6OGQ.js",
+      imports: [
+        "/build/_shared/chunk-RRIN2AHI.js",
+        "/build/_shared/chunk-G3CXWJSJ.js",
+        "/build/_shared/chunk-NMZL6IDN.js",
+      ],
+      hasAction: false,
+      hasLoader: false,
+      hasCatchBoundary: false,
+      hasErrorBoundary: false,
+    },
+  },
+  version: "2f833f50",
+  hmr: {
+    runtime: "/build/_shared/chunk-7HCXXYEW.js",
+    timestamp: 1700584561896,
+  },
+  url: "/build/manifest-2F833F50.js",
+};

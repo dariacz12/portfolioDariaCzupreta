@@ -54,7 +54,7 @@ const Projects = () => {
   const videoRefs = useRef<Array<HTMLVideoElement | null>>([]);
   const setVideoRefs = (
     videoElement: HTMLVideoElement | null,
-    index: number
+    index: number,
   ) => {
     videoRefs.current[index] = videoElement;
   };
@@ -105,7 +105,7 @@ const Projects = () => {
       id={"projects"}
       display={"flex"}
       alignItems={"center"}
-      mt={{ lg: "80px", md: "60px", sm: "0px" }}
+      mt={{ lg: "80px", md: "60px", base: "0px" }}
       justifyContent={"center"}
       flexWrap={"wrap"}
       width={"100vw"}
@@ -196,14 +196,14 @@ const Projects = () => {
                           color={"white"}
                           textShadow={"lg"}
                           as="h4"
-                          fontSize={{ lg: "lg", md: "md", sm: "sm" }}
+                          fontSize={{ lg: "lg", md: "md", base: "sm" }}
                         >
                           {projectName}
                         </Heading>
                         <Text
                           mb={"10px"}
                           color={"white"}
-                          fontSize={{ lg: "md", md: "md", sm: "sm" }}
+                          fontSize={{ lg: "md", md: "md", base: "sm" }}
                           textShadow={"2xl"}
                           pr={"20px"}
                         >
@@ -218,7 +218,7 @@ const Projects = () => {
                             .filter((tool) => tools.indexOf(tool) <= 4)
                             .map((tool) => (
                               <Text
-                                fontSize={{ sm: "xs", base: "sm" }}
+                                fontSize={{ base: "xs" }}
                                 borderRadius={"5px"}
                                 padding={"5px"}
                                 backgroundColor={"#673AB7"}
@@ -237,7 +237,11 @@ const Projects = () => {
                 <ProjectBoxSmall onClick={() => navigate(`/myprojects/${id}`)}>
                   <video
                     style={{ borderRadius: "15px" }}
-                    width={"650px"}
+                    // width={"650px"}
+                    autoPlay={true}
+                    loop
+                    playsInline
+                    muted
                     src={videoName}
                   ></video>
                   <TextBox>

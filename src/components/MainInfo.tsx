@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Image,
-  Text,
-  Wrap,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, Wrap } from "@chakra-ui/react";
 import styled from "styled-components";
 import openCV from "../customHooks/openCV";
 import { size } from "../size";

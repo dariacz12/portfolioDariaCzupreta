@@ -1,6 +1,5 @@
 import { Box, Card, CardBody, Heading, Image, Text } from "@chakra-ui/react";
 
-
 const Highlights = () => {
   return (
     <Box
@@ -28,7 +27,10 @@ const Highlights = () => {
             Programming Languages:
           </Text>
           <Text fontSize="md" pt={"3px"}>
-            JavaScript, React, CSS, HTML
+            JavaScript, React Native
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            React, CSS, HTML
           </Text>
           <Text
             fontSize="md"
@@ -40,13 +42,10 @@ const Highlights = () => {
           </Text>
           <Text fontSize="md" pt={"3px"}>
             {" "}
-            Git
+            Git, Expo, TypeScript
           </Text>
           <Text fontSize="md" pt={"3px"}>
-            TypeScript
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            React Router, React Query{" "}
+            React Router, React Query, Axios{" "}
           </Text>
           <Text fontSize="md" pt={"3px"}>
             {" "}
@@ -54,15 +53,27 @@ const Highlights = () => {
           </Text>
           <Text fontSize="md" pt={"3px"}>
             {" "}
-            Firebase, Styled Components
+            Firebase, Strapi
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            {" "}
+            Styled Components, Tailwind
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            {" "}
+            Nativewind, SCSS
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            {" "}
+            Maestro E2E tests, Mocha
+          </Text>
+          <Text fontSize="md" pt={"3px"}>
+            {" "}
+            Figma (creating UI/UX mockups)
           </Text>
           <Text fontSize="md" pt={"3px"}>
             {" "}
             Elementor Pro
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Mocha, SCSS, Axios
           </Text>
           <Text
             fontSize="md"
@@ -99,9 +110,9 @@ const Highlights = () => {
         pr={"10px"}
         src="/programmergirl.svg"
         pt={"10px"}
-        mt={{ md: "40px", sm: "0px" }}
-        mb={{ md: "0px", sm: "40px" }}
-        height={{ md: "430px", sm: "420px" }}
+        mt={{ md: "40px", base: "0px" }}
+        mb={{ xs: "40px", md: "0px", base: "40px" }}
+        height={{ md: "430px", base: "420px" }}
       />
     </Box>
   );

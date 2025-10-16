@@ -56,7 +56,7 @@ const Footer = () => {
                   p={"5px"}
                   src={`/${name}`}
                   pt={"30px"}
-                  height={{ md: "70px", sm: "60px" }}
+                  height={{ md: "70px", base: "60px" }}
                 />{" "}
               </a>
             ))}
@@ -66,7 +66,7 @@ const Footer = () => {
           <Image
             src="/computer.png"
             pt={"30px"}
-            height={{ md: "230px", sm: "220px" }}
+            height={{ md: "230px", base: "220px" }}
           />
         </Box>
       </Box>

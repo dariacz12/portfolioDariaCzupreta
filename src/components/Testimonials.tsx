@@ -1,11 +1,5 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import {
-  Heading,
-  Icon,
-  Image,
-  Text,
-  Wrap,
-} from "@chakra-ui/react";
+import { Heading, Icon, Image, Text, Wrap } from "@chakra-ui/react";
 import { useState } from "react";
 import styled from "styled-components";
 import { size } from "../size";
@@ -56,7 +50,7 @@ const testimonialsList = [
     testimonialBody:
       "Jestem mega zadowolony ze współpracy z Darią przy przepisywaniu naszej aplikacji mobilnej Swiplo. Nowa wersja wygląda teraz jeszcze lepiej, działa też wydajniej i ma więcej fajnych opcji. Polecam Darię każdemu, kto szuka frontend developera, który naprawdę wczuwa się w biznesowe potrzeby klienta.",
   },
-   
+
   {
     id: 2,
     name: "Marcin Cieślinski",
@@ -65,7 +59,7 @@ const testimonialsList = [
     testimonialBody:
       "I have worked with Daria on several projects. Daria proved herself as a very effective and motivated person. She is always ready to take on any challenge brought in her way. Her willingness to learn and apply the new knowledge are extraordinary.",
   },
-   
+
   {
     id: 3,
     name: "Rafał Pikuła",
@@ -93,7 +87,7 @@ const Testimonials = () => {
     setcurrentIndex(slideIndex);
   };
   return (
-    <MainContainer id={"testimonials"} >
+    <MainContainer id={"testimonials"}>
       <Heading as="h6" size="lg" mb={"20px"} mt={"20px"}>
         {" "}
         Testimonials{" "}

@@ -11,7 +11,5 @@ var entry_dev_default = () => {
   import("/build/_shared/esm-7TJB7Q4C.js");
   import("/build/_shared/remix_hmr-KSOVHS6T.js");
 };
-export {
-  entry_dev_default as default
-};
+export { entry_dev_default as default };
 //# sourceMappingURL=/build/__remix_entry_dev-TKBRVLBV.js.map
