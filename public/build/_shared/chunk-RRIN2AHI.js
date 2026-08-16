@@ -75,16 +75,16 @@ var projectsList = [
     website: "https://fiszki-z-programowania.pl/",
     github: "https://github.com/dariacz12",
     images: [
-      { name: "programming_cars_hub1.png", caption: "Main page" },
+      { name: "programming_cars_hub1.jpg", caption: "Main page" },
       {
-        name: "programming_cars_hub2.png",
+        name: "programming_cars_hub2.jpg",
         caption: "Product benefits with 3D box illustration that can be moved",
       },
       {
-        name: "programming_cars_hub3.png",
+        name: "programming_cars_hub3.jpg",
         caption: "Presentation of the components of the flashcard",
       },
-      { name: "programming_cars_hub4.png", caption: "Product shop" },
+      { name: "programming_cars_hub4.jpg", caption: "Product shop" },
     ],
   },
   {
@@ -107,13 +107,13 @@ var projectsList = [
     website: "",
     github: "https://github.com/dariacz12/canban-app",
     images: [
-      { name: "phototskser1.png", caption: "Login page" },
-      { name: "phototskser2.png", caption: " Adding checklist to the task" },
+      { name: "phototskser1.jpg", caption: "Login page" },
+      { name: "phototskser2.jpg", caption: " Adding checklist to the task" },
       {
-        name: "phototskser3.png",
+        name: "phototskser3.jpg",
         caption: "Main page with list of boards and 'Create New Board' Button",
       },
-      { name: "phototskser4.png", caption: " Settings page" },
+      { name: "phototskser4.jpg", caption: " Settings page" },
     ],
   },
   //
@@ -129,10 +129,10 @@ var projectsList = [
     website: "",
     github: "",
     images: [
-      { name: "handmade1.png", caption: "Product sub-page" },
-      { name: "handmade2.png", caption: "Home page slider" },
-      { name: "handmade3.png", caption: "List of the most purchased products" },
-      { name: "handmade4.png", caption: "Product categories" },
+      { name: "handmade1.jpg", caption: "Product sub-page" },
+      { name: "handmade2.jpg", caption: "Home page slider" },
+      { name: "handmade3.jpg", caption: "List of the most purchased products" },
+      { name: "handmade4.jpg", caption: "Product categories" },
     ],
   },
 ];

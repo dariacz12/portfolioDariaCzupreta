@@ -9,28 +9,33 @@ const Highlights = () => {
       flexWrap={"wrap"}
       width={"100vw"}
     >
-      <Card py={"10px"} mx={10} width={"max"}>
+      <Card
+        py={"10px"}
+        mx={10}
+        px={10}
+        width={"max"}
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        <Heading as="h6" size="lg" mt={"15px"}>
+          {" "}
+          Highlights{" "}
+        </Heading>
         <CardBody
-          textAlign={"center"}
+          textAlign={"start"}
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Heading as="h6" size="md">
-            Highlights
-          </Heading>
           <Text
             fontSize="md"
-            pt={"10px"}
+            pt={"1px"}
             color={"#673AB7"}
             fontWeight={"medium"}
           >
-            Programming Languages:
+            • Frontend Frameworks & Libraries:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            JavaScript, React Native
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            React, CSS, HTML
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            React, React Native, Expo
           </Text>
           <Text
             fontSize="md"
@@ -38,42 +43,39 @@ const Highlights = () => {
             fontWeight={"medium"}
             pt={"10px"}
           >
-            Dev Tools:
+            • Core Web Technologies:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
             {" "}
-            Git, Expo, TypeScript
+            TypeScript, JavaScript, HTML, CSS
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            React Router, React Query, Axios{" "}
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • React Ecosystem:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            React Router, React Query
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
             React Hook Form, Redux
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Firebase, Strapi
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • Styling & UI:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Styled Components, Tailwind
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Tailwind, NativeWind
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Nativewind, SCSS
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Maestro E2E tests, Mocha
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Figma (creating UI/UX mockups)
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            {" "}
-            Elementor Pro
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Styled Components, SCSS
           </Text>
           <Text
             fontSize="md"
@@ -81,27 +83,96 @@ const Highlights = () => {
             fontWeight={"medium"}
             pt={"10px"}
           >
-            Teamwork Tools:
+            • Backend / APIs / Data:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Firebase, Strapi, Axios
+          </Text>
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • Testing:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Mocha, Maestro E2E tests
+          </Text>
+
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • AI Development Tools:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Cursor, Antigravity, Figma MCP
+          </Text>
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • Version Control & Design Tools:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Git, Figma (UI/UX mockups)
+          </Text>
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • Collaboration Tools:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            ClickUp, Teamwork, Jira, Trello
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
             Miro, Discord, Slack
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            Clickup, Teamwork, Jira, Trello
-          </Text>
-          <Text fontSize="md" pt={"3px"}>
-            Scrum, Kanban, Lean, Agile, Design Thinking
-          </Text>
           <Text
             fontSize="md"
             color={"#673AB7"}
             fontWeight={"medium"}
             pt={"10px"}
           >
-            Languages I speak:
+            • Development Methodologies:
           </Text>
-          <Text fontSize="md" pt={"3px"}>
-            English, Polish, Russian, Belarusian
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Scrum, Kanban, Lean, Agile
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Design Thinking
+          </Text>
+
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • AI Development Tools:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            Cursor, Antigravity, Figma MCP
+          </Text>
+
+          <Text
+            fontSize="md"
+            color={"#673AB7"}
+            fontWeight={"medium"}
+            pt={"10px"}
+          >
+            • Languages I speak:
+          </Text>
+          <Text fontSize="md" pt={"3px"} pl={"12px"}>
+            English, Polish
           </Text>
         </CardBody>
       </Card>

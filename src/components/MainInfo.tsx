@@ -28,9 +28,10 @@ const MainInfo = () => {
   // };
   return (
     <MainContainer>
-      <Heading as="h2" size="2xl" my={5}>
-        Frontend Developer
+      <Heading as="h2" size="xl" mt={5} mb={2}>
+        React | React Native Developer
       </Heading>
+
       <TextWrapper>
         <Text textAlign={"center"} fontSize={{ base: "lg", md: "xl" }}>
           I code beautifully, simple things, and I love what I do
@@ -45,7 +46,7 @@ const MainInfo = () => {
         />
       </Wrap>
       <Text zIndex={1} color={"white"} fontWeight={"medium"} fontSize="xl">
-        Daria Czupreta
+        Daria Semla
       </Text>
       <Button
         my={3}

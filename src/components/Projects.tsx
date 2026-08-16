@@ -12,7 +12,9 @@ const Menu = styled.div`
 `;
 const ProjectBox = styled.div`
   position: relative;
-  margin: 40px;
+  // margin: 40px;
+  width: 650px;
+  aspect-ratio: 1626 / 902;
 
   @media (max-width: ${size.md}) {
     display: none;
@@ -37,16 +39,19 @@ const TextBox = styled.div`
   }
   @media (max-width: ${size.md}) {
     bottom: 0px;
-    padding-left: 50px;
+    padding-left: 25px;
   }
 `;
 
 const ProjectBoxSmall = styled.div`
   position: relative;
   display: none;
+  width: 100%;
+  // aspect-ratio: 1626 / 902;
+
   @media (max-width: ${size.md}) {
     display: flex;
-    margin: 20px;
+    // margin: 20px;
   }
 `;
 
@@ -172,22 +177,31 @@ const Projects = () => {
           .filter(({ type }) => type === state || !state)
           .map(({ videoName, id, projectName, mainInfo, tools }, index) => {
             return (
-              <Box key={index}>
+              <Box
+                key={index}
+                width={{ lg: "650px", md: "650px", base: "100%" }}
+                sx={{ aspectRatio: "1626 / 902" }}
+                m={{ lg: "40px", base: "20px" }}
+              >
                 <ProjectBox
                   onMouseOver={() => handleMouseOver(id)}
                   onMouseOut={() => handleMouseOut(id)}
                   onClick={() => navigate(`/myprojects/${id}`)}
                 >
                   <video
-                    style={{ opacity: 0.5, borderRadius: "15px" }}
-                    width={"650px"}
+                    style={{
+                      opacity: 0.5,
+                      borderRadius: "15px",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
                     ref={(videoElement) => setVideoRefs(videoElement, index)}
                     loop
                     playsInline
                     muted
                     src={videoName}
-                  ></video>
-
+                  />
                   {textBoxVisibility[id] && (
                     <TextBox>
                       <Box>

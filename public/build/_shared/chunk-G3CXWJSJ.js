@@ -490,12 +490,10 @@ var require_lodash = __commonJS({
       var isProto = isPrototype(object),
         result = [];
       for (var key in object) {
-        if (
-          !(
-            key == "constructor" &&
-            (isProto || !hasOwnProperty.call(object, key))
-          )
-        ) {
+        if (!(
+          key == "constructor" &&
+          (isProto || !hasOwnProperty.call(object, key))
+        )) {
           result.push(key);
         }
       }
@@ -957,7 +955,7 @@ var require_react_fast_compare = __commonJS({
         if (Array.isArray(a2)) {
           length = a2.length;
           if (length != b2.length) return false;
-          for (i = length; i-- !== 0; ) if (!equal(a2[i], b2[i])) return false;
+          for (i = length; i-- !== 0;) if (!equal(a2[i], b2[i])) return false;
           return true;
         }
         var it;
@@ -983,7 +981,7 @@ var require_react_fast_compare = __commonJS({
         ) {
           length = a2.length;
           if (length != b2.length) return false;
-          for (i = length; i-- !== 0; ) if (a2[i] !== b2[i]) return false;
+          for (i = length; i-- !== 0;) if (a2[i] !== b2[i]) return false;
           return true;
         }
         if (a2.constructor === RegExp)
@@ -1003,10 +1001,10 @@ var require_react_fast_compare = __commonJS({
         keys2 = Object.keys(a2);
         length = keys2.length;
         if (length !== Object.keys(b2).length) return false;
-        for (i = length; i-- !== 0; )
+        for (i = length; i-- !== 0;)
           if (!Object.prototype.hasOwnProperty.call(b2, keys2[i])) return false;
         if (hasElementType && a2 instanceof Element) return false;
-        for (i = length; i-- !== 0; ) {
+        for (i = length; i-- !== 0;) {
           if (
             (keys2[i] === "_owner" ||
               keys2[i] === "__v" ||
@@ -9789,7 +9787,7 @@ var progressPercentage = Object.assign(Object.assign({}, percent), {
 var isColorString = (type, testProp) => (v) => {
   return Boolean(
     (isString(v) && singleColorRegex.test(v) && v.startsWith(type)) ||
-      (testProp && Object.prototype.hasOwnProperty.call(v, testProp)),
+    (testProp && Object.prototype.hasOwnProperty.call(v, testProp)),
   );
 };
 var splitColor = (aName, bName, cName) => (v) => {
@@ -16817,8 +16815,8 @@ function createProjectionNode(_a7) {
           ((_a8 = this.parent) === null || _a8 === void 0
             ? void 0
             : _a8.isTreeAnimating) ||
-            this.currentAnimation ||
-            this.pendingAnimation,
+          this.currentAnimation ||
+          this.pendingAnimation,
         );
         if (!this.isTreeAnimating) {
           this.targetDelta = this.relativeTarget = void 0;
@@ -16910,9 +16908,9 @@ function createProjectionNode(_a7) {
             : _a8.members.length) || 0) <= 1;
         var shouldCrossfadeOpacity = Boolean(
           isSharedLayoutAnimation &&
-            !isOnlyMember &&
-            this.options.crossfade === true &&
-            !this.path.some(hasOpacityCrossfade),
+          !isOnlyMember &&
+          this.options.crossfade === true &&
+          !this.path.some(hasOpacityCrossfade),
         );
         this.animationProgress = 0;
         this.mixTargetDelta = function (latest) {

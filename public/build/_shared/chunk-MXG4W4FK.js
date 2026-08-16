@@ -5843,8 +5843,8 @@ function createSearchParams(init) {
   }
   return new URLSearchParams(
     typeof init === "string" ||
-    Array.isArray(init) ||
-    init instanceof URLSearchParams
+      Array.isArray(init) ||
+      init instanceof URLSearchParams
       ? init
       : Object.keys(init).reduce((memo, key) => {
           let value = init[key];

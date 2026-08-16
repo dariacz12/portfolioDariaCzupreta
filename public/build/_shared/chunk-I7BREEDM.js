@@ -1167,7 +1167,7 @@ function R(e) {
 }
 var T;
 var k = function (e, t) {
-  for (var n = t.length; n; ) e = (33 * e) ^ t.charCodeAt(--n);
+  for (var n = t.length; n;) e = (33 * e) ^ t.charCodeAt(--n);
   return e;
 };
 var j = function (e) {
@@ -1349,7 +1349,7 @@ var le = (function () {
     }),
     (e.prototype.insertRules = function (e2, t) {
       if (e2 >= this.groupSizes.length) {
-        for (var n = this.groupSizes, o2 = n.length, r2 = o2; e2 >= r2; )
+        for (var n = this.groupSizes, o2 = n.length, r2 = o2; e2 >= r2;)
           if ((r2 <<= 1) < 0) throw ce(16, "".concat(e2));
         ((this.groupSizes = new Uint32Array(r2)),
           this.groupSizes.set(n),
@@ -1394,7 +1394,7 @@ var pe = /* @__PURE__ */ new Map();
 var de = 1;
 var he = function (e) {
   if (ue.has(e)) return ue.get(e);
-  for (; pe.has(de); ) de++;
+  for (; pe.has(de);) de++;
   var t = de++;
   if ((0 | t) < 0 || t > 1073741824) throw ce(16, "".concat(t));
   return (ue.set(e, t), pe.set(t, e), t);

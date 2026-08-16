@@ -64,7 +64,9 @@ export default function ProjectRoute() {
   const paramId = useParams().projectId;
   console.log("params", paramId);
   const [pageLoaded, setPageLoaded] = useState<boolean>();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     setPageLoaded(true);
     const video = videoRef.current;
@@ -113,7 +115,9 @@ export default function ProjectRoute() {
                   tools,
                   website,
                   github,
+                  type,
                   images,
+                  assertsType,
                 }) => (
                   <Box display={"flex"} flexDirection={"column"}>
                     <TextWrap>
@@ -207,45 +211,49 @@ export default function ProjectRoute() {
                               ))}
                             </Box>
                             <Box display={"flex"} flexWrap={"wrap"}>
-                              <Box paddingTop={"25px"} paddingRight={"100px"}>
-                                <Text
-                                  color={"white"}
-                                  fontWeight={"medium"}
-                                  fontSize="md"
-                                >
-                                  Website
-                                </Text>
-                                <Link
-                                  fontSize="sm"
-                                  fontWeight={"medium"}
-                                  color={"white"}
-                                  href={`${website}`}
-                                  isExternal
-                                >
-                                  {" "}
-                                  {website}{" "}
-                                </Link>
-                              </Box>
-                              <Box paddingTop={"25px"}>
-                                <Text
-                                  color={"white"}
-                                  fontWeight={"medium"}
-                                  fontSize="md"
-                                >
-                                  {" "}
-                                  GitHub
-                                </Text>
-                                <Link
-                                  fontSize="sm"
-                                  fontWeight={"medium"}
-                                  color={"white"}
-                                  href={`${github}`}
-                                  isExternal
-                                >
-                                  {" "}
-                                  {github}{" "}
-                                </Link>
-                              </Box>
+                              {website && (
+                                <Box paddingTop={"25px"} paddingRight={"100px"}>
+                                  <Text
+                                    color={"white"}
+                                    fontWeight={"medium"}
+                                    fontSize="md"
+                                  >
+                                    {type === "app" ? "App Store" : "Website"}
+                                  </Text>
+                                  <Link
+                                    fontSize="sm"
+                                    fontWeight={"medium"}
+                                    color={"white"}
+                                    href={`${website}`}
+                                    isExternal
+                                  >
+                                    {" "}
+                                    {website}{" "}
+                                  </Link>
+                                </Box>
+                              )}
+                              {github && (
+                                <Box paddingTop={"25px"}>
+                                  <Text
+                                    color={"white"}
+                                    fontWeight={"medium"}
+                                    fontSize="md"
+                                  >
+                                    {" "}
+                                    GitHub
+                                  </Text>
+                                  <Link
+                                    fontSize="sm"
+                                    fontWeight={"medium"}
+                                    color={"white"}
+                                    href={`${github}`}
+                                    isExternal
+                                  >
+                                    {" "}
+                                    {github}{" "}
+                                  </Link>
+                                </Box>
+                              )}
                             </Box>
                           </Box>
                         </TextWrap>
@@ -272,7 +280,7 @@ export default function ProjectRoute() {
                               alignItems={"center"}
                               justifyContent={"center"}
                             >
-                              {paramId === "1" && (
+                              {assertsType === "imageVertical" && (
                                 <Image
                                   style={{ borderRadius: "15px" }}
                                   src={`/${name}`}
@@ -280,7 +288,7 @@ export default function ProjectRoute() {
                                   width={{ md: "300px", base: "200px" }}
                                 />
                               )}
-                              {paramId === "2" && (
+                              {assertsType === "videoVertical" && (
                                 <video
                                   style={{
                                     borderRadius: "15px",
@@ -296,7 +304,7 @@ export default function ProjectRoute() {
                                 ></video>
                               )}
 
-                              {paramId !== "1" && paramId !== "2" && (
+                              {assertsType === "imageHorisontal" && (
                                 <Image
                                   style={{ borderRadius: "15px" }}
                                   src={`/${name}`}
