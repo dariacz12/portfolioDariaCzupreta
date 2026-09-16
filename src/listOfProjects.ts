@@ -8,7 +8,7 @@ export const projectsList = [
     mainInfo: "Modern online store for musical instruments and hi-fi furniture",
     text: "This modern online store offers handcrafted guitar stands and hi-fi furniture made from natural wood. Built with Next.js, React, and Static Site Generation (SSG), it is optimized for performance, SEO, and mobile devices. Stripe integration ensures secure and convenient payments. I was responsible for development, UI/UX design, and product photography, including image editing.",
     tools: ["React", "TypeScript", "Next.js", "SEO", "Schema.org", "SSG"],
-    website: "",
+    website: "https://truematerials.eu/en",
     github: "",
     images: [
       { name: "truematerialsfooter.png", caption: "Footer & Contact" },
